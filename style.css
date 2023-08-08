@@ -1,0 +1,78 @@
+html, body{
+    margin: 0;
+    font-family: sans-serif;
+}
+body::-webkit-scrollbar
+{
+    display: none;
+}
+body::-moz-scrollbar
+{
+    display: none;
+}
+
+.outer {
+    text-align: center;
+    padding: 10rem 4rem;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.space-holder {
+    position: relative;
+    width: 100%;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.horizontal {
+    position: absolute;
+    height: 100%;
+    will-change: transform;
+}
+
+.cards {
+    position: relative;
+    height: 100%;
+    padding-left: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sample-card {
+    position: relative;
+    height: 400px;
+    width: 500px;
+    background-color: royalblue;
+    margin-right: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.revealer {
+    opacity: 0;
+    transition: .4s opacity ease-in-out, .2s transform ease-in-out;
+    transform: scale(.5);
+}
+
+.show-revealer {
+    opacity: 1;
+    transform: none;
+}
